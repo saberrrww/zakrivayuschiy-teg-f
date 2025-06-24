@@ -1,1 +1,5 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family-main: 'Inter-Variable';
+  --font-family-heading: 'PressStart2P-Regular';
+  --wdth: 400;
+}

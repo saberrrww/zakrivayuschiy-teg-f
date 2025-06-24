@@ -13,4 +13,10 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-family-main), sans-serif;
+  font-variation-settings: 'wdth' var(--wdth);
+}
+
+.content {
+
 }
