@@ -2,10 +2,13 @@
   --font-family-main: 'Inter-Variable';
   --font-family-heading: 'PressStart2P';
   --page-background-color: rgb(171, 169, 169);
-  --wdth: 400;
+  --text-wght: 400;
+  --heading-wght: 700;
   --content-width : clamp(320px, 100%, 700px);
   --content-padding: clamp(10px, 4vw, 40px);
   --accent-color: #000;
+  --contour-color: #000;
+  --animation-fill-color: rgb(26, 23, 23);
   --block-background-color: #fff;
   --page-background-gradient:
       repeating-linear-gradient(

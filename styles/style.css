@@ -1,15 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   display: flex;
   flex-direction: column;
@@ -37,14 +25,13 @@
   background-color: var(--block-background-color);
 }
 
-header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   font-family: var(--font-family-heading);
-  font-weight: var(--wdth);
   text-transform: uppercase;
   line-height: 1;
   padding: var(--content-padding);
@@ -54,8 +41,253 @@ header {
 
 .header__title {
   font-size: var(--title-font-size);
+  font-weight: var(--text-wght);
 }
 
 .header__subtitle {
   font-size: var(--subtitle-font-size);
+  font-weight: var(--text-wght);
+}
+
+.card__list {
+  display: grid;
+  gap: 50px;
+}
+
+.card__title {
+  padding: 5px 10px;
+  font-variation-settings: "wght" var(--heading-wght);
+}
+
+.card__image-container {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+
+.card__image-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-overlay-text {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: inline-block;
+  opacity: 50%;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+}
+
+.image-overlay-text-stroke {
+  text-shadow:
+    -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .image-overlay-text-stroke {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+.card__text {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  margin: 25px;
+}
+
+@media (max-width: 375px) {
+  .image-overlay-text {
+    right: 13px;
+  }
+}
+
+.button {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  overflow: hidden;
+  color: currentColor;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  background: var(--block-background-color);
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: white;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: translateX(0%);
+}
+
+.button:hover {
+  color: black;
+  background: white;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  filter: drop-shadow(2px 2px currentColor);
+}
+
+.card__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 25px 25px 0;
+  gap: 12px;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s ease;
+  cursor: pointer;
+  border: transparent solid 2px;
+  inline-size: 38px;
+  block-size: 38px;
+  padding: 0;
+  background: none;
+}
+
+.card__icon-button:focus-visible {
+  border: black solid 2px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+  cursor: pointer;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+.save__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 100px;
+}
+
+.save__block-button {
+  display: flex;
+  gap: 8px;
+  width: 335px;
+  height: 55px;
+}
+
+.save__block-icon {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+@media (max-width: 375px) {
+  .save__block-button {
+    flex-direction: column;
+    width: 306px;
+    height: 80px;
+  }
+  .save__block-icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
+
+.save__block-dialog {
+  box-sizing: border-box;
+  width: 353px;
+  border: none;
+  padding: 30px 30px 25px;
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  aspect-ratio: 353 / 193;
+}
+
+.save__block-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.save__block-dialog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.save__block-dialog-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.save__block-dialog-icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.save__block-dialog-text {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  max-inline-size: 180px;
+}
+
+.save__block-dialog-ok {
+  width: 293px;
+  height: 38px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+@media (max-width: 375px) {
+  .save__block-dialog {
+    width: 341px;
+    aspect-ratio: 1.785;
+  }
+
+  .save__block-dialog-ok {
+    width: 100%;
+    max-width: 293px;
+  }
 }
