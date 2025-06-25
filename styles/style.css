@@ -11,12 +11,51 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family-main), sans-serif;
   font-variation-settings: 'wdth' var(--wdth);
+  background-color: var(--page-background-color);
+  font-size: 18px;
+  background-image: var(--page-background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .content {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+}
 
+.block-decor {
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  background-color: var(--block-background-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-family-heading);
+  font-weight: var(--wdth);
+  text-transform: uppercase;
+  line-height: 1;
+  padding: var(--content-padding);
+  block-size: clamp(327px, calc(327px + (100vw - 375px) * 0.0385), 368px);
+  margin: 100px auto;
+}
+
+.header__title {
+  font-size: var(--title-font-size);
+}
+
+.header__subtitle {
+  font-size: var(--subtitle-font-size);
 }
