@@ -232,7 +232,6 @@
 .save__block-dialog {
   box-sizing: border-box;
   width: 353px;
-  border: none;
   padding: 30px 30px 25px;
   font-family: var(--font-family-heading);
   text-transform: uppercase;
