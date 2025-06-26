@@ -63,6 +63,7 @@
   position: relative;
   display: block;
   aspect-ratio: 1 / 1;
+  border-block: solid 2px #000;
 }
 
 .card__image-item {
@@ -103,7 +104,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  gap: 10px;
+  gap: 27px;
   margin: 25px;
 }
 
@@ -236,6 +237,7 @@
   font-family: var(--font-family-heading);
   text-transform: uppercase;
   aspect-ratio: 353 / 193;
+  border: solid 2px #000;
 }
 
 .save__block-dialog::backdrop {
@@ -283,7 +285,7 @@ body:has(dialog[open]) {
 @media (max-width: 375px) {
   .save__block-dialog {
     width: 341px;
-    aspect-ratio: 1.785;
+    aspect-ratio: 1.8;
   }
 
   .save__block-dialog-ok {

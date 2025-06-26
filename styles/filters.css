@@ -1,0 +1,28 @@
+
+.filter-ds-boy {
+  filter: contrast(1.3) brightness(1.1);
+}
+
+.filter-woman-green {
+  filter: blur(2px);
+}
+
+.filter-hand-reaches {
+  filter: sepia(50%);
+}
+
+.filter-men-sitting {
+  filter: hue-rotate(260deg);
+}
+
+.filter-broken-stone {
+  filter: hue-rotate(300deg) brightness(1.1) contrast(1.2);
+}
+
+.filter-man-macbook {
+  filter: grayscale(1);
+}
+
+.filter-hand-up {
+  filter: invert(1);
+}
