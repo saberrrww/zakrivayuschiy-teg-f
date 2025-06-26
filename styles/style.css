@@ -6,7 +6,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family-main), sans-serif;
-  font-variation-settings: 'wdth' var(--wdth);
+  font-variation-settings: 'wdth' var(--text-wght);
   background-color: var(--page-background-color);
   font-size: 18px;
   background-image: var(--page-background-gradient);
@@ -32,6 +32,7 @@
   align-items: center;
   gap: 20px;
   font-family: var(--font-family-heading);
+  font-variation-settings: 'wdth' var(--heading-wght);
   text-transform: uppercase;
   line-height: 1;
   padding: var(--content-padding);
