@@ -36,7 +36,7 @@
   line-height: 1;
   padding: var(--content-padding);
   min-block-size: 368px;
-  margin: 100px auto; 
+  margin: 100px auto;
 }
 
 .header__title {
