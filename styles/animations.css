@@ -16,7 +16,7 @@
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
-  transition-delay: 0.03s;
+  transition-delay: 0.05s;
 }
 
 .like-icon:not(:hover) .core {
@@ -47,7 +47,7 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation -fill-color);
+  fill: var(--animation-fill-color);
   transition-delay: 0.06s;
 }
 

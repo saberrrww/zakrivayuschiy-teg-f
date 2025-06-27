@@ -31,23 +31,22 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: var(--font-family-heading);
-  font-variation-settings: 'wdth' var(--heading-wght);
+  font-family: var(--font-family-heading), fantasy;
   text-transform: uppercase;
   line-height: 1;
   padding: var(--content-padding);
-  block-size: clamp(327px, calc(327px + (100vw - 375px) * 0.0385), 368px);
-  margin: 100px auto;
+  min-block-size: 368px;
+  margin: 100px auto; 
 }
 
 .header__title {
   font-size: var(--title-font-size);
-  font-weight: var(--text-wght);
+  font-variation-settings: 'wdth' var(--text-wght);
 }
 
 .header__subtitle {
   font-size: var(--subtitle-font-size);
-  font-weight: var(--text-wght);
+  font-variation-settings: 'wdth' var(--text-wght);
 }
 
 .card__list {
@@ -81,7 +80,7 @@
   right: 25px;
   display: inline-block;
   opacity: 50%;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading), fantasy;
   font-size: 14px;
   mix-blend-mode: hard-light;
 }
@@ -110,6 +109,10 @@
 }
 
 @media (max-width: 375px) {
+  .header {
+    min-block-size: 327px;
+  }
+
   .image-overlay-text {
     right: 13px;
   }
@@ -124,7 +127,7 @@
   border: 2px solid black;
   overflow: hidden;
   color: currentColor;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading), fantasy;
   font-size: 14px;
   background: var(--block-background-color);
   cursor: pointer;
@@ -164,17 +167,16 @@
   justify-content: flex-end;
   align-items: center;
   padding: 0 25px 25px 0;
-  gap: 12px;
+  gap: 6px;
 }
 
 .card__icon-button {
   display: flex;
   justify-content: center;
-  align-items: center;
   transition: border 0.3s ease;
   cursor: pointer;
   border: transparent solid 2px;
-  inline-size: 38px;
+  inline-size: 40px;
   block-size: 38px;
   padding: 0;
   background: none;
@@ -190,7 +192,7 @@
 
 .like-icon {
   inline-size: 39px;
-  block-size: 36px;
+  block-size: 38px;
   cursor: pointer;
 }
 
@@ -234,7 +236,7 @@
   box-sizing: border-box;
   width: 353px;
   padding: 30px 30px 25px;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading), fantasy;
   text-transform: uppercase;
   aspect-ratio: 353 / 193;
   border: solid 2px #000;
