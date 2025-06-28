@@ -34,7 +34,7 @@
   font-family: var(--font-family-heading), fantasy;
   text-transform: uppercase;
   line-height: 1;
-  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
+  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   margin: 100px auto;
 }
 
