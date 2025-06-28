@@ -34,8 +34,7 @@
   font-family: var(--font-family-heading), fantasy;
   text-transform: uppercase;
   line-height: 1;
-  padding: var(--content-padding);
-  min-block-size: 368px;
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
   margin: 100px auto;
 }
 
@@ -105,14 +104,11 @@
   justify-content: center;
   align-content: center;
   gap: 27px;
-  margin: 25px;
+  margin: 27px;
+  line-height: 117%;
 }
 
 @media (max-width: 375px) {
-  .header {
-    min-block-size: 327px;
-  }
-
   .image-overlay-text {
     right: 13px;
   }
@@ -128,9 +124,12 @@
   overflow: hidden;
   color: currentColor;
   font-family: var(--font-family-heading), fantasy;
-  font-size: 14px;
+  font-size: var(--button-font-size);
+  line-height: 90%;
   background: var(--block-background-color);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+
 }
 
 .button::before {
@@ -159,7 +158,8 @@
 }
 
 .button:focus-visible {
-  filter: drop-shadow(2px 2px currentColor);
+  box-shadow: 2px 2px 0 currentColor;
+  outline: none;
 }
 
 .card__actions {
@@ -240,6 +240,7 @@
   text-transform: uppercase;
   aspect-ratio: 353 / 193;
   border: solid 2px #000;
+  font-size: 14px;
 }
 
 .save__block-dialog::backdrop {
@@ -267,10 +268,8 @@
 }
 
 .save__block-dialog-text {
-  font-size: 12px;
-  line-height: 1.5;
+  line-height: 150%;
   text-align: left;
-  max-inline-size: 180px;
 }
 
 .save__block-dialog-ok {
